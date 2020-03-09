@@ -6,4 +6,4 @@ before_install:
     - docker build -t gmerritt313/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run gmerritt313/docker-react npm run test -- --coverage
+    - docker run -e CI=true gmerritt313/docker-react npm run test
